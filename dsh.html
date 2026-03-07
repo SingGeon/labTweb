@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/dashboard/styles.css">
+  <script defer src="/dashboard/dashboard.js"></script>
+  <title>CRM Educațional - Dashboard</title>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header>
+    <img src="/images/Logo.svg" alt="Logo" class="header-logo" />
+
+    <div class="navigation">
+      <nav>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#support">Suport</a>
+        <a href="#faq">FAQ</a>
+        <a href="#cabinet">Cabinet personal</a>
+      </nav>
+
+      <img src="/images/User.png" alt="Profil" class="user-profile" />
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <div class="main-container">
+    <!-- SIDEBAR -->
+    <aside>
+      <div class="menu-section">
+        <div class="menu-item"><span>Matematica</span></div>
+        <div class="menu-item"><span>Limba română</span></div>
+        <div class="menu-item"><span>Limba engleză</span></div>
+        <div class="menu-item"><span>Informatica</span></div>
+      </div>
+
+      <div class="progress-section">
+        <p>Progress bar</p>
+
+        <div class="progress-item">
+          <div class="progress-label"><span>Matematica</span><span>30%</span></div>
+          <div class="progress-bar"><div class="progress-fill yellow" style="width: 30%"></div></div>
+        </div>
+
+        <div class="progress-item">
+          <div class="progress-label"><span>Limba română</span><span>50%</span></div>
+          <div class="progress-bar"><div class="progress-fill yellow" style="width: 50%"></div></div>
+        </div>
+
+        <div class="progress-item">
+          <div class="progress-label"><span>Limba engleză</span><span>20%</span></div>
+          <div class="progress-bar"><div class="progress-fill yellow" style="width: 20%"></div></div>
+        </div>
+
+        <div class="progress-item">
+          <div class="progress-label"><span>Informatica</span><span>80%</span></div>
+          <div class="progress-bar"><div class="progress-fill yellow" style="width: 80%"></div></div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- CONTENT -->
+    <div class="content">
+      <div class="welcome-section">
+        <h1 id="welcomeName">Welcome</h1>
+        <p>Cursuri disponibile</p>
+      </div>
+
+      <div class="courses-grid">
+        <div class="course-card">
+          <img src="/images/MatematicaCard.png" alt="Matematica" class="course-image">
+          <div class="course-content">
+            <div class="course-header">
+              <span class="course-title">Matematica</span>
+              <div class="course-stats"><span>36 capitole</span><span>12 teste</span></div>
+            </div>
+            <div class="course-progress">
+              <div class="progress-mini"><div class="progress-mini-fill yellow" style="width: 30%"></div></div>
+            </div>
+            <div class="course-start">Începe</div>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <img src="/images/LimbaRomanaCard.png" alt="Limba Romana" class="course-image">
+          <div class="course-content">
+            <div class="course-header">
+              <span class="course-title">Limba română</span>
+              <div class="course-stats"><span>36 capitole</span><span>12 teste</span></div>
+            </div>
+            <div class="course-progress">
+              <div class="progress-mini"><div class="progress-mini-fill yellow" style="width: 50%"></div></div>
+            </div>
+            <div class="course-start">Începe</div>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <img src="/images/LimbaEnglezaCard.png" alt="Limba Engleza" class="course-image">
+          <div class="course-content">
+            <div class="course-header">
+              <span class="course-title">Limba engleză</span>
+              <div class="course-stats"><span>36 capitole</span><span>12 teste</span></div>
+            </div>
+            <div class="course-progress">
+              <div class="progress-mini"><div class="progress-mini-fill yellow" style="width: 20%"></div></div>
+            </div>
+            <div class="course-start">Începe</div>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <img src="/images/InformaticaCard.png" alt="Informatica" class="course-image">
+          <div class="course-content">
+            <div class="course-header">
+              <span class="course-title">Informatica</span>
+              <div class="course-stats"><span>36 capitole</span><span>12 teste</span></div>
+            </div>
+            <div class="course-progress">
+              <div class="progress-mini"><div class="progress-mini-fill yellow" style="width: 80%"></div></div>
+            </div>
+            <div class="course-start">Începe</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <div class="logo-box">📚</div>
+        <span>CRM Educaţional</span>
+        <div class="anniversary">10 ANOS</div>
+      </div>
+      <p class="footer-text">Platformă de pregătire pentru examenul de bacalaureat, examenul de clasa a 9-a</p>
+    </div>
+  </footer>
+</body>
+</html>

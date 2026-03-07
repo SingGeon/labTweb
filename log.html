@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/logare/Logstyle.css">
+  <script defer src="/logare/logscript.js"></script>
+  <title>Learnify - Autentificare</title>
+
+</head>
+<body>
+  <div class=page-center>
+    <div class="container">
+
+
+      <div class="auth-wrapper">
+        <div class="auth-image">
+          <img src="/images/Logimg.png" alt="Team collaboration">
+          <button class="back-btn">← Back to presentation page</button>
+        </div>
+
+        <div class="auth-form">
+          <div class="logo-section">
+            <img src="/images/Logo.svg" alt="Logo" class="auth-logo">
+            <h1 id="form-title">Crează un cont <span>learnify</span></h1>
+            <p class="form-subtitle">
+              Al deja un cont? <span class="toggle-link" onclick="toggleForm()">Log in</span>
+            </p>
+          </div>
+
+          <!-- REGISTER FORM -->
+          <div class="form-section active" id="register-form">
+
+            <!-- STEP 1 -->
+            <div class="step-section active" id="step-1">
+              <div class="steps-indicator">
+                <div class="step active">
+                  <div class="step-number">1</div>
+                  <span>Informații de bază</span>
+                </div>
+                <div class="step-separator"></div>
+                <div class="step">
+                  <div class="step-number">2</div>
+                  <span>Profil & Materii</span>
+                </div>
+              </div>
+
+
+              <form id="step1Form">
+                <div class="form-group">
+                  <label>Cum te numești?</label>
+                  <input type="text" id="name" placeholder="ex. Ioan Popescu" required>
+                </div>
+
+                <div class="form-group">
+                  <label>Selectează email</label>
+                  <input type="email" id="email" placeholder="ex. user@example.com" required>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label>Selectează parola</label>
+                    <input type="password" id="password" placeholder="Parola ta..." required>
+                  </div>
+                  <div class="form-group">
+                    <label>Confirmă parola</label>
+                    <input type="password" id="confirmPassword" placeholder="Confirmă..." required>
+                  </div>
+                </div>
+
+                <div class="button-group">
+                  <button type="button" class="btn-next" onclick="nextStep()">Pasul următor</button>
+                </div>
+              </form>
+            </div>
+
+            <!-- STEP 2 -->
+            <div class="step-section" id="step-2">
+              <div class="steps-indicator">
+                <div class="step">
+                  <div class="step-number">1</div>
+                  <span>Informații de bază</span>
+                </div>
+                <div class="step-separator active"></div>
+                <div class="step active">
+                  <div class="step-number">2</div>
+                  <span>Profil & Materii</span>
+                </div>
+              </div>
+
+              <form id="step2Form">
+
+                <!-- CLASA & LICEU -->
+                <div class="form-row">
+                  <div class="form-group">
+                    <label>Ce clasă ești?</label>
+                    <select id="clasa" required>
+                      <option value="" style="color: #FFCE80;">Selectează clasa...</option>
+                      <option value="Clasa 10">Clasa 10</option>
+                      <option value="Clasa 11">Clasa 11</option>
+                      <option value="Clasa 12">Clasa 12</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label>În ce liceu înveți?</label>
+                    <select id="liceu" required>
+                      <option value="">Selectează liceul...</option>
+                      <option value="1">Liceul Teoretic "Alexandru cel Bun" - Chișinău</option>
+                      <option value="2">Liceul Teoretic "Mihai Eminescu" - Chișinău</option>
+                      <option value="3">Liceul Teoretic "Vasile Alecsandri" - Iaşi</option>
+                      <option value="4">Liceul de Informatică "Spiru Haret" - Craiova</option>
+                      <option value="5">Colegiul Național "Gheorghe Șincai" - Cluj-Napoca</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- LOCALITATEA -->
+                <div class="form-group">
+                  <label>În ce localitate înveți?</label>
+                  <select id="localitate" required>
+                    <option value="">Selectează localitatea...</option>
+                    <option value="chisinau">Chișinău</option>
+                    <option value="balti">Bălți</option>
+                    <option value="iasi">Iaşi</option>
+                    <option value="constanta">Constanța</option>
+                    <option value="craiova">Craiova</option>
+                    <option value="cluj">Cluj-Napoca</option>
+                    <option value="brasov">Brașov</option>
+                    <option value="timisoara">Timișoara</option>
+                  </select>
+                </div>
+
+                <!-- MATERII -->
+                <label style="margin-top: 20px; display: block;">Alege 4 materii</label>
+                <div class="subjects-grid">
+                  <div class="form-group">
+                    <select id="materia1" required>
+                      <option value="">Materia 1</option>
+                      <option value="matematica">Matematica</option>
+                      <option value="romana">Limba română</option>
+                      <option value="engleza">Limba engleză</option>
+                      <option value="informatica">Informatica</option>
+                      <option value="istoria">Istoria</option>
+                      <option value="geografia">Geografia</option>
+                      <option value="biologia">Biologia</option>
+                      <option value="chimia">Chimia</option>
+                      <option value="fizica">Fizica</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <select id="materia2" required>
+                      <option value="">Materia 2</option>
+                      <option value="matematica">Matematica</option>
+                      <option value="romana">Limba română</option>
+                      <option value="engleza">Limba engleză</option>
+                      <option value="informatica">Informatica</option>
+                      <option value="istoria">Istoria</option>
+                      <option value="geografia">Geografia</option>
+                      <option value="biologia">Biologia</option>
+                      <option value="chimia">Chimia</option>
+                      <option value="fizica">Fizica</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <select id="materia3" required>
+                      <option value="">Materia 3</option>
+                      <option value="matematica">Matematica</option>
+                      <option value="romana">Limba română</option>
+                      <option value="engleza">Limba engleză</option>
+                      <option value="informatica">Informatica</option>
+                      <option value="istoria">Istoria</option>
+                      <option value="geografia">Geografia</option>
+                      <option value="biologia">Biologia</option>
+                      <option value="chimia">Chimia</option>
+                      <option value="fizica">Fizica</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <select id="materia4" required>
+                      <option value="">Materia 4</option>
+                      <option value="matematica">Matematica</option>
+                      <option value="romana">Limba română</option>
+                      <option value="engleza">Limba engleză</option>
+                      <option value="informatica">Informatica</option>
+                      <option value="istoria">Istoria</option>
+                      <option value="geografia">Geografia</option>
+                      <option value="biologia">Biologia</option>
+                      <option value="chimia">Chimia</option>
+                      <option value="fizica">Fizica</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="button-group">
+                  <button type="button" class="btn-prev" onclick="prevStep()">Înapoi</button>
+                  <button type="submit" class="btn-submit">Înregistrează-te</button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- LOGIN FORM -->
+          <div class="form-section" id="login-form">
+           
+              <form id="loginForm">
+                <div class="form-group">
+                  <label>Email</label>
+                  <input id="loginEmail" type="email" placeholder="ex. user@example.com" required>
+              </div>
+
+               <div class="form-group">
+                 <label>Parola</label>
+                 <input id="loginPassword" type="password" placeholder="Parola ta..." required>
+                </div>
+
+                 <button style="padding: 15px 45px; margin-top: 50px; display: block; margin: 0 auto 0;"
+                         type="submit" class="btn-submit">
+                   Log in
+                  </button>
+                </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
